@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<?php echo url_path("style.css");?>">
     <title>Startpagina</title>
 </head>
 <body>
