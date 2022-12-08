@@ -1,0 +1,46 @@
+*{
+    padding: 0px;
+    margin: 0px;
+ }
+ .background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+    flex-direction: column;
+ }
+.name{
+    box-shadow: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    border: 1rem rgb(92, 89, 89) solid;
+    background: rgb(92, 89, 89) ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.mail{
+   
+    box-shadow: 20px;
+}
+
+.textbox{
+    justify-content: center;
+    top: 34rem;
+    left: 24rem;
+    box-shadow: 20px;
+}
+
+.sub{
+    justify-content: center;
+    top: 36rem;
+    left: 14rem;
+    box-shadow: 20px;
+    border-radius: 3px;
+}
