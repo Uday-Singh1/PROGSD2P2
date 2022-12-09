@@ -1,37 +1,42 @@
 <?php
 var_dump($_POST);
+$scheldwoorden = array('kut', 'komkommer', 'banaan', 'vieze website');
 
-if(isset($_POST["submit"]) && !empty($_POST["submit"]))
-{
-    $user = $_POST["user"];
-    $validate_user = trim($user) . stripslashes($user) . htmlspecialchars($user);
-    echo $user;
-  
+if(isset($_POST['submit'])){
+    if(isset($_POST["user"]) && !empty($_POST["user"]))
+    {
+        $user = $_POST["user"];
+        $validate_user = htmlspecialchars(stripslashes(trim($user)));
+        echo $validate_user;
+      
+    }
+    else {
+        echo"ERROR";
+    }
+    
+    if(isset($_POST["email"]) && !empty($_POST["email"]))
+    {
+        $email = $_POST["email"];
+        $validate_email = trim($email) . stripslashes($email) . htmlspecialchars($email);
+      
+    }
+    else {
+        echo"ERROR";
+    }
+    
+    if(isset($_POST["texto"]) && !empty($_POST["texto"]))
+    {
+        $texto = $_POST["texto"];
+        $validate_texto = trim($texto) . stripslashes($texto) . htmlspecialchars($texto);
+        foreach($scheldwoorden as $scheldwoord){
+            $validate_texto = str_replace($scheldwoord, "", $validate_texto);
+        }
+        echo $validate_texto;
+    }
+    else {
+        echo"ERROR";
+    }
 }
-else {
-    echo"ERROR";
-}
-
-if(isset($_POST["submit"]) && !empty($_POST["submit"]))
-{
-    $email = $_POST["email"];
-    $validate_email = trim($email) . stripslashes($email) . htmlspecialchars($email);
-  
-}
-else {
-    echo"ERROR";
-}
-
-if(isset($_POST["submit"]) && !empty($_POST["submit"]))
-{
-    $texto = $_POST["texto"];
-    $validate_texto = trim($texto) . stripslashes($texto) . htmlspecialchars($texto);
-  
-}
-else {
-    echo"ERROR";
-}
-
 
 
 ?>
