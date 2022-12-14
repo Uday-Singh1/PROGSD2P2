@@ -1,0 +1,23 @@
+    Week 3. Opdracht 1
+
+$_SERVER = 
+is een array met informatie zoals headers, paden en scriptlocaties. De items in deze array worden gemaakt door de webserver, daarom is er geen garantie dat elke webserver een van deze zal leveren; servers kunnen sommige weglaten of andere bieden die hier niet worden vermeld. De meeste van deze variabelen zijn echter verwerkt in de
+
+$_POST =
+Associatieve array variabelen doorgegeven aan het huidige script via de HTTP POST-methode bij gebruik van applicatie/x-www-form-urlencoded of multipara/form-data als het HTTP-inhoudstype in het verzoek.
+
+STRIPSLASHES = 
+stripslashes() kan worden gebruikt als u deze gegevens niet invoegt in een plaats (zoals een database) waarvoor escape nodig is. Als u bijvoorbeeld gewoon gegevens rechtstreeks uit een HTML-formulier uitvoert.
+Retourneert een tekenreeks met backslashes toegevoegd voor tekens die moeten worden geëscaped. Deze karakters zijn:
+
+alleenstaande citaat (')
+dubbele aanhalingstekens (")
+backslash (\)
+NUL (de NUL-byte)
+Een use-case van addlashes() is het escapen van de bovengenoemde tekens in een string die door PHP moet worden geëvalueerd:
+
+htmlspecialchars — Converteer speciale tekens naar HTML-entiteiten
+
+Als de invoerreeks die aan deze functie is doorgegeven en het uiteindelijke document dezelfde tekenset delen, is deze functie voldoende om invoer voor te bereiden voor opname in de meeste contexten van een HTML-document.
+Als de invoer echter tekens kan vertegenwoordigen die niet zijn gecodeerd in de uiteindelijke tekenset van het document en u deze tekens wilt behouden (als numerieke of benoemde entiteiten),
+kunnen zowel deze functie als htmlentities() (die alleen subtekenreeksen codeert die een naam hebben entiteit equivalenten) kan onvoldoende zijn. Mogelijk moet u in plaats daarvan mb_encode_numericentity() gebruiken
