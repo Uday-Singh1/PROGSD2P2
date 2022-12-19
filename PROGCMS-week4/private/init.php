@@ -5,5 +5,3 @@ define ("SHARED_PATH", PRIVATE_PATH . "/shared");
 
 include SHARED_PATH . '/functions.php';
 
-
-
